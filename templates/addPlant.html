@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Plant</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+    
+</head>
+<body class="body-sec">
+    <nav class="navbar navbar-expand-md fixed-top">                
+        <div class="container"> 
+            <a href="home.html">
+                <img src="{{ url_for('static', filename='Images/logo.png') }}" class="navbar-logo" alt="Logo"></img>
+            </a>
+            <a href="viewData.html">
+                <img src="{{ url_for('static', filename='Images/table.png') }}" class="navbar-logo" alt="Logo"></img>
+            </a>
+            <a href="deleteTables.html">
+                <img src="{{ url_for('static', filename='Images/bin.png') }}" class="navbar-logo" alt="Logo"></img>
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav d-flex">
+                    <li>
+                        <a class="nav-link" href="addFarmer.html">
+                            <img src="{{ url_for('static', filename='Images/farmer.png') }}" class="navbar-image" alt=" Home "></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addField.html">
+                            <img src="{{ url_for('static', filename='Images/land.png') }}" class="navbar-image" alt=" Notification "></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addCrop.html">
+                            <img src="{{ url_for('static', filename='Images/cultivate.png') }}" class="navbar-image" alt=" Settings "></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addPlant.html">
+                            <img src="{{ url_for('static', filename='Images/plant.png') }}" class="navbar-image" alt="Add Plant"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addVariety.html">
+                            <img src="{{ url_for('static', filename='Images/variety.png') }}" class="navbar-image" alt="Add Variety"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addSeed.html">
+                            <img src="{{ url_for('static', filename='Images/seed.png') }}" class="navbar-image" alt="Add Seed"></img>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <p class="title-text">
+        <img src="{{ url_for('static', filename='Images/plant.png') }}" class="button-image" alt="Plant"></img>
+        <b>Adaugare date plante</b>
+    </p>
+
+    <div class="form-style">
+        <form method="POST" action="/addPlant.html">
+            <label for="denumire_planta">Denumirea plantei</label>
+            <input name="denumire_planta" type="text" class="form-control is-valid" id="denumire_planta" pattern="[A-Z][a-z]{1,}" placeholder="ex. Rosie " required><br>    
+            <label for="tip_planta">Tipul plantei</label>
+            <input name="tip_planta" type="text" class="form-control is-valid" id="tip_planta" pattern="[A-Z][a-z]{1,}" placeholder="ex. Anuala " required><br>    
+            <input type="submit">
+        </form>
+    </div>
+    
+</body>
+</html>

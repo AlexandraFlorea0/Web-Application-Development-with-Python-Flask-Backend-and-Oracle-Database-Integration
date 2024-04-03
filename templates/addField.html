@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Field</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+    
+</head>
+<body class="body-sec">
+    <nav class="navbar navbar-expand-md fixed-top">                
+        <div class="container"> 
+            <a href="home.html">
+                <img src="{{ url_for('static', filename='Images/logo.png') }}" class="navbar-logo" alt="Logo"></img>
+            </a>
+            <a href="viewData.html">
+                <img src="{{ url_for('static', filename='Images/table.png') }}" class="navbar-logo" alt="Logo"></img>
+            </a>
+            <a href="deleteTables.html">
+                <img src="{{ url_for('static', filename='Images/bin.png') }}" class="navbar-logo" alt="Logo"></img>
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav d-flex">
+                    <li>
+                        <a class="nav-link" href="addFarmer.html">
+                            <img src="{{ url_for('static', filename='Images/farmer.png') }}" class="navbar-image" alt=" Home "></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addField.html">
+                            <img src="{{ url_for('static', filename='Images/land.png') }}" class="navbar-image" alt=" Notification "></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addCrop.html">
+                            <img src="{{ url_for('static', filename='Images/cultivate.png') }}" class="navbar-image" alt=" Settings "></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addPlant.html">
+                            <img src="{{ url_for('static', filename='Images/plant.png') }}" class="navbar-image" alt="Add Plant"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addVariety.html">
+                            <img src="{{ url_for('static', filename='Images/variety.png') }}" class="navbar-image" alt="Add Variety"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addSeed.html">
+                            <img src="{{ url_for('static', filename='Images/seed.png') }}" class="navbar-image" alt="Add Seed"></img>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <p class="title-text">
+        <img src="{{ url_for('static', filename='Images/land.png') }}" class="button-image" alt=" Field "></img>
+        <b>Adaugare date terenuri</b>
+    </p>
+
+    <div class="form-style">
+        <form method="POST" action="/addField.html">
+            <label for="nume_fermier">Nume posesor</label>
+            <select id="nume_fermier" name="nume_fermier">
+                <option></option>
+                {% for option in nume_fermier_options %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select><br>
+            <label for="prenume_fermier">Prenume posesor</label>
+            <select id="prenume_fermier" name="prenume_fermier">
+                <option></option>
+                {% for option in prenume_fermier_options %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select><br><label for="suprafata_teren">Suprafata terenului(ha)</label>
+            <input name="suprafata_teren" type="number" class="form-control is-valid" id="suprafata_teren" min="0" max="99999" required><br>
+            <label for="tip_teren">Tipul terenului</label>
+            <select id="tip_teren" name="tip_teren"  value="arabil" required>
+                <option value="arabil">Arabil</option>
+                <option value="sera">Sera</option>
+                <option value="pomicol">Pomicol</option>
+                <option value="viticol">Viticol</option>
+              </select><br>
+              <label for="tip_cultura">Tipul culturii</label>
+              <select id="tip_cultura" name="tip_cultura" required>
+                <option></option>
+                <option value="cereale">Cereale</option>
+                <option value="fructe">Fructe</option>
+                <option value="legume">Legume</option>
+              </select><br>     
+            <input type="submit">
+        </form>
+    </div>
+    
+</body>
+</html>

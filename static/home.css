@@ -1,0 +1,160 @@
+/*---------------BACKGROUND-----------------------*/
+.body-home {
+  background-image: url('Images/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.body-sec {
+  background-image: url('Images/background2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+/*---------------HOMEPAGE STYLE-------------------*/
+.home-body-style{
+  margin: 3px;
+  display: flex;
+  font-size: 30px;
+}
+/*----------------TEXT---------------------*/
+.title-text{
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+/*----------------FORM---------------------*/
+form { 
+  
+  margin: 0 auto; 
+  width:50%;
+  padding-left: 10%;
+  }
+.form-style{
+  margin: 10px;
+  display: flex;
+  font-size: 30px;
+}
+/*----------------TABLE---------------------*/
+h2 {
+  color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+table {
+  background-color: white;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:hover {
+  background-color: #C1E1C1;
+}
+
+/*----------------BUTTONS---------------------*/
+.button-style{
+    background-color: white;
+    color: black;
+    border: 2px solid #C1E1C1; /* Green */
+    border-radius: 15%;
+    text-decoration: none;
+    margin: 5%;
+    padding: 4%;
+    width: 15%;
+}
+.button-style:hover{
+    background-color:  #C1E1C1;
+}
+.button-image {
+  padding-right: 15px;
+  width: 40px;
+}
+.button-image:hover{
+  opacity: 0.5;
+}
+/*----------------NAVBAR-----------------------*/
+.navbar {
+    
+    z-index: 99;
+    padding: 5px; 
+    display: flex;
+}
+
+.navbar-collapse {
+    display: flex;
+    float:inline-end;
+    padding-left: 600px;
+}
+
+.navbar li {
+    margin: 0 5px; 
+}
+.navbar-image {
+    display: flex;
+    padding-left: 15px;
+    width: 30px;
+}
+
+.navbar-logo {
+    width: 40px;
+    padding-left: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: inline-end;
+}
+  .navbar-image:hover{
+    opacity: 0.5;
+  }
+
+  .navbar-expand-lg {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 800px){
+
+    /*aici va trebui modificat pentru a deveni responsive*/
+
+    .navbar-collapse{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      width: 150px;
+      padding: 10px;
+    }
+
+  .navbar-image{
+    padding-top: 10px;
+    width: 15px;
+  }
+  .navbar-logo{
+    width: 25px;
+    border-radius: 50%;
+  }
+  .navbar-expand-lg {
+    margin: 3px;
+    padding: 3px;
+  }
+  .button-image{
+    padding-top: 10px;
+    width: 15px;
+  }
+}

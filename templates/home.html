@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming app</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+    
+</head>
+<body class="body-home">
+    <nav class="navbar navbar-expand-md fixed-top">                
+        <div class="container"> 
+            <a href="home.html">
+                <img src="{{ url_for('static', filename='Images/logo.png') }}" class="navbar-logo" alt="Logo"></img>
+            </a>
+            <a href="viewData.html">
+                <img src="{{ url_for('static', filename='Images/table.png') }}" class="navbar-logo" alt="Logo"></img>
+            </a>
+            <a href="deleteTables.html">
+                <img src="{{ url_for('static', filename='Images/bin.png') }}" class="navbar-logo" alt="Logo"></img>
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav d-flex">
+                    <li>
+                        <a class="nav-link" href="addFarmer.html">
+                            <img src="{{ url_for('static', filename='Images/farmer.png') }}" class="navbar-image" alt="Add Farmer"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addField.html">
+                            <img src="{{ url_for('static', filename='Images/land.png') }}" class="navbar-image" alt="Add Land"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addCrop.html">
+                            <img src="{{ url_for('static', filename='Images/cultivate.png') }}" class="navbar-image" alt="Add Crop"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addPlant.html">
+                            <img src="{{ url_for('static', filename='Images/plant.png') }}" class="navbar-image" alt="Add Plant"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addVariety.html">
+                            <img src="{{ url_for('static', filename='Images/variety.png') }}" class="navbar-image" alt="Add Variety"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addSeed.html">
+                            <img src="{{ url_for('static', filename='Images/seed.png') }}" class="navbar-image" alt="Add Seed"></img>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <p class="title-text">
+        <b>Adauga date despre:</b>
+    </p>
+    <div class = "home-body-style">
+        <a href="addFarmer.html" class = "button-style">
+            <img src="{{ url_for('static', filename='Images/farmer.png') }}" class="button-image" alt=" Home "></img>Fermieri
+        </a>
+        <a href="addField.html" class = "button-style">
+            <img src="{{ url_for('static', filename='Images/land.png') }}" class="button-image" alt="Add Land"></img>Terenuri
+        </a> 
+        <a href="addCrop.html" class = "button-style">
+            <img src="{{ url_for('static', filename='Images/cultivate.png') }}" class="button-image" alt="Add Crop"></img>Culturi
+        </a>
+    </div>
+    <div class = "home-body-style">
+        <a href="addPlant.html" class = "button-style">
+            <img src="{{ url_for('static', filename='Images/plant.png') }}" class="button-image" alt="Add Plant"></img>Plante
+        </a>
+        <a href="addVariety.html" class = "button-style">
+            <img src="{{ url_for('static', filename='Images/variety.png') }}" class="button-image" alt="Add Variety"></img>Soiuri
+        </a>
+        <a href="addSeed.html" class = "button-style">
+            <img src="{{ url_for('static', filename='Images/seed.png') }}" class="button-image" alt="Add Seed"></img>Seminte
+        </a>      
+    </div>
+    
+</body>
+</html>

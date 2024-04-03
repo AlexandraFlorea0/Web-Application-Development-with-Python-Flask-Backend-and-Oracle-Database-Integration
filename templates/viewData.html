@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Data</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+    
+</head>
+<body class="body-home">
+    <nav class="navbar navbar-expand-md fixed-top">                
+        <div class="container">
+            <a href="viewData.html">
+                <img src="{{ url_for('static', filename='Images/table.png') }}" class="navbar-logo" alt="Logo"></img>
+            </a> 
+            <a href="home.html">
+                <img src="{{ url_for('static', filename='Images/logo.png') }}" class="navbar-logo" alt="Logo"></img>
+            </a>
+            <a href="deleteTables.html">
+                <img src="{{ url_for('static', filename='Images/bin.png') }}" class="navbar-logo" alt="Logo"></img>
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav d-flex">
+                    <li>
+                        <a class="nav-link" href="addFarmer.html">
+                            <img src="{{ url_for('static', filename='Images/farmer.png') }}" class="navbar-image" alt="Add Farmer"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addField.html">
+                            <img src="{{ url_for('static', filename='Images/land.png') }}" class="navbar-image" alt="Add Land"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addCrop.html">
+                            <img src="{{ url_for('static', filename='Images/cultivate.png') }}" class="navbar-image" alt="Add Crop"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addPlant.html">
+                            <img src="{{ url_for('static', filename='Images/plant.png') }}" class="navbar-image" alt="Add Plant"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addVariety.html">
+                            <img src="{{ url_for('static', filename='Images/variety.png') }}" class="navbar-image" alt="Add Variety"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="addSeed.html">
+                            <img src="{{ url_for('static', filename='Images/seed.png') }}" class="navbar-image" alt="Add Seed"></img>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h2>Date despre fermieri, terenuri si culturi</h2>
+    <table border="1">
+        <tr>
+            <th>Numele fermierului</th>
+            <th>Prenumele fermierului</th>
+            <th>Tipul terenului</th>
+            <th>Suprafața terenului</th>
+            <th>Tipul Culturii</th>
+            <th>Denumirea plantei</th>
+            <th>Perioada cultivarii</th>
+            <th>Data cultivarii</th>
+        </tr>
+        {% for row in results1 %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }} ha</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <td>{{ row[6] }}</td>
+                <td>{{ row[7] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <h2>Date despre semințe și soiuri</h2>
+    <table>
+        <tr>
+            <th>Denumirea plantei</th>
+            <th>Denumirea Soi</th>
+            <th>Descrierea soiului</th>
+            <th>Tipul plantei</th>
+            <th>Nr. luni de crestere</th>
+            <th>Producătorul semintelor</th>
+            <th>Calitatea semintelor</th>
+            <th>Pret KG Vanzare seminte</th>
+        </tr>
+        {% for row in results2 %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }} luni</td>
+                <td>{{ row[5] }}</td>
+                <td>{{ row[6] }}</td>
+                <td>{{ row[7] }} kg</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
